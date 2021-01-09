@@ -1,0 +1,481 @@
+.heading {
+    background-image: url("../img/84770f_35c0b8b2d8bc4bbe9ae56d0d331f6533_mv2.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .header {
+        .header-items {
+            padding: 30px 0;
+            @include flex();
+            border-bottom: 1px solid $white-color;
+
+            .header-item {
+                .logo {
+                    color: $primary-color;
+                    font-size: 30px;
+                    font-family: 'Dancing Script', cursive;
+                    text-decoration: none;
+                }
+
+                nav {
+                    ul {
+                        display: flex;
+
+                        li {
+
+                            list-style-type: none;
+
+                            a {
+                                text-decoration: none;
+                                font-size: 16px;
+                                color: $white-color;
+                                padding: 0 10px;
+                                transition: color 0.35s ease-in;
+
+                                &:hover {
+                                    color: $primary-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .contacts {
+        @include flex();
+        padding: 30px 0;
+
+       
+
+        form {
+            i {
+                color: $primary-color;
+                font-size: 19px;
+            }
+
+            a {
+                font-size: 16px;
+                text-decoration: none;
+                color: $white-color;
+                margin-left: 15px;
+            }
+        }
+    }
+
+    .main {
+        width: 70%;
+        padding: 170px 0;
+
+        h1 {
+            font-size: 90px;
+            font-family: 'Suez One', serif;
+            color: $white-color;
+        }
+
+        p {
+            line-height: 1.6em;
+            font-size: 21px;
+            color: $white-color;
+            width: 70%;
+            padding: 55px 0;
+        }
+    }
+}
+
+// playing
+.movie-sessions {
+    background-color: $secondary-color;
+    padding: 50px 0;
+
+    .current {
+        .title {
+            border-bottom: 1px solid $white-color;
+        }
+
+        .movies {
+            padding: 35px 0;
+            @include align-cards();
+
+            .item {
+                .item-img {
+                    img {
+                        transition: all 0.35s ease;
+
+                    }
+                }
+
+                .description {
+                    h3 {
+                        font-size: 30px;
+                        color: $white-color;
+                        font-family: 'Suez One', serif;
+                        padding: 17px 0;
+                    }
+
+                    span {
+                        font-size: 20px;
+                        color: $white-color;
+                    }
+                }
+
+                &:hover {
+                    img {
+                        filter: grayscale(1.1);
+                    }
+
+                }
+            }
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+
+            .btn {
+                margin: 65px 0;
+            }
+        }
+    }
+
+    .soon {
+        .title {
+            margin: 40px 0;
+        }
+
+        .cards {
+            @include flex();
+
+            .card {
+                @include center();
+                border: 1px solid $white-color;
+                padding: 40px 0;
+                width: 33.15%;
+
+                span {
+                    background-color: $secondary-dark;
+                    color: $primary-color;
+                    padding: 10px 20px;
+                    display: inline-block;
+                    border-radius: 15px;
+                }
+
+                h3 {
+                    font-size: 30px;
+                    color: $white-color;
+                    font-family: 'Suez One', serif;
+                    padding: 22px 0;
+                }
+
+                .watch {
+                    color: $white-color;
+                    display: flex;
+                    align-items: center;
+
+                    p {
+                        font-size: 18px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// description
+.description-section {
+    background-color: $secondary-dark;
+    padding: 110px 0;
+
+    .title {
+        @include center();
+        padding: 50px 0 115px 0;
+    }
+
+    .items {
+        @include align-cards();
+
+        .item {
+            width: 21%;
+            @include center();
+
+            .steps {
+
+                span {
+                    font-size: 40px;
+                    color: $primary-color;
+                    font-family: 'Suez One', serif;
+                }
+
+                .line {
+                    height: 1px;
+                    background-color: $primary-color;
+                    width: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 40px 0 60px 0;
+
+                    .circle {
+                        background-color: $primary-color;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .card-info {
+                h4 {
+                    font-size: 26px;
+                    font-family: 'Suez One', serif;
+                    color: $white-color;
+                    padding: 25px 0;
+                }
+
+                p {
+                    font-size: 18px;
+                    color: $white-color;
+                    line-height: 1.6em;
+                }
+            }
+        }
+    }
+}
+
+// price
+.price-section {
+    background-color: $secondary-dark;
+    padding-top: 30px;
+
+    .items {
+        width: 100%;
+        @include center();
+
+        .price-items {
+            width: 75%;
+            background-color: $primary-color;
+            position: relative;
+
+            .price-title {
+                padding: 45px 0;
+                @include center();
+
+                h2 {
+                    font-size: 28px;
+                    color: $secondary-dark;
+                }
+
+                .dashed {
+                    width: 90%;
+                    height: 1px;
+                    border-bottom-style: dashed;
+                    border-bottom-color: $secondary-dark;
+                    border-bottom-width: 2px;
+                    margin: 32px 0;
+                }
+            }
+
+            .price-item {
+                @include align-cards();
+
+                .item {
+                    width: 24%;
+
+                    h3 {
+                        font-size: 26px;
+                        color: $secondary-dark;
+                        font-family: 'Suez One', serif;
+                        padding: 40px 0;
+                    }
+
+                    span {
+                        color: $secondary-dark;
+                        font-size: 80px;
+                        font-family: 'Suez One', serif;
+                        padding: 40px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// snacks
+.snack-section {
+    background-color: $secondary-dark;
+
+    .items {
+        background-color: $secondary-color;
+        @include flex();
+        padding: 140px 0;
+        position: relative;
+
+        .img-container {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 65%;
+        }
+
+        .item {
+            width: 30%;
+            @include center();
+
+            h5 {
+                font-size: 21px;
+                color: $white-color;
+            }
+
+            .dashed {
+                width: 200px;
+                height: 1px;
+                border-bottom-style: dashed;
+                border-bottom-color: $white-color;
+                border-bottom-width: 2px;
+                margin: 32px 0;
+            }
+
+            .snacks {
+                @include center();
+
+                span {
+                    line-height: 1.6em;
+                    font-size: 40px;
+                    color: $white-color;
+                    font-family: 'Suez One', serif;
+                }
+            }
+
+            .btn {
+                background-color: transparent;
+                color: $white-color;
+                margin: 45px 0;
+                transition: 0.35s ease-in;
+
+                &:hover {
+                    background-color: $white-color;
+
+                }
+            }
+        }
+    }
+}
+
+// sign up
+.registration-form {
+    background-color: $secondary-dark;
+    padding: 155px 0;
+
+    .title {
+        @include center();
+
+        p {
+            line-height: 1.6em;
+            font-size: 18px;
+        }
+    }
+
+    .items {
+        width: 100%;
+
+        .item {
+            width: 100%;
+            @include center();
+
+            input {
+                width: 80%;
+                height: 80px;
+                background-color: #401A3D;
+                border: 3px solid $primary-color;
+                font-size: 30px;
+                @include center();
+                outline: none;
+                margin: 10px 0;
+
+                &::placeholder {
+                    color: $primary-color;
+                    font-family: 'Suez One', serif;
+                }
+            }
+
+            .register-btn {
+                font-size: 30px;
+                font-family: 'Suez One', serif;
+                text-decoration: none;
+                width: 80%;
+                height: 80px;
+                color: $secondary-dark;
+                background-color: $primary-color;
+                @include center();
+                border: 3px solid $primary-color;
+                transition: all 0.35s ease-in;
+
+                &:hover {
+                    background-color: $white-color;
+                }
+            }
+        }
+    }
+}
+// footer
+footer {
+    background-color: $secondary-color;
+    .footer {
+        border-bottom: 1px solid $white-color;
+        padding: 55px 0;
+        .items {
+            @include align-cards();
+            .item {
+                width: 22%;
+                .logo {
+                    color: $white-color;
+                    font-size: 30px;
+                    font-family: 'Dancing Script', cursive;
+                }
+                ul {
+                    li {
+                        list-style-type: none;
+                        a {
+                            text-decoration: none;
+                            line-height: 1.6em;
+                            font-size: 16px;
+                            color: $white-color;
+                        }
+                    }
+                }
+                p {
+                    line-height: 1.6em;
+                    font-size: 16px;
+                    color: $white-color;
+                }
+                
+            .btn {
+                background-color: transparent;
+                color: $white-color;
+                margin: 45px 0;
+                transition: 0.35s ease-in;
+
+                &:hover {
+                    background-color: $white-color;
+                    color: $secondary-dark;
+                }
+            }
+            }
+        }
+    }
+    .copy-right {
+        padding: 20px 0;
+        p {
+            color: $white-color;
+            font-size: 16px;
+            a {
+                text-decoration: none;
+                color: $white-color;
+            }
+        }
+    }
+}
