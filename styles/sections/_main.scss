@@ -101,9 +101,11 @@
             @include align-cards();
 
             .item {
+                width: 22%;
                 .item-img {
                     img {
                         transition: all 0.35s ease;
+                        width: 100%;
 
                     }
                 }
@@ -128,6 +130,12 @@
                     }
 
                 }
+                @media only screen and (max-width: 970px) {
+                    width: 40%;
+                }
+                @media only screen and (max-width: 768px) {
+                    width: 60%;
+                }
             }
         }
 
@@ -148,6 +156,9 @@
 
         .cards {
             @include flex();
+            @media only screen and (max-width: 768px) {
+                @include center();
+            }
 
             .card {
                 @include center();
@@ -180,8 +191,17 @@
                         margin-left: 10px;
                     }
                 }
+                @media only screen and (max-width: 970px) {
+                    width: 48%;
+                    margin: 12px 0;
+                }
+                @media only screen and (max-width: 768px) {
+                    width: 70%;
+                    margin: 0;
+                }
             }
         }
+       
     }
 }
 
@@ -227,7 +247,11 @@
                     }
                 }
             }
-
+            .card-img {
+                img {
+                    width: 100%;
+                }
+            }
             .card-info {
                 h4 {
                     font-size: 26px;
@@ -241,6 +265,12 @@
                     color: $white-color;
                     line-height: 1.6em;
                 }
+            }
+            @media only screen and (max-width: 970px) {
+                width: 40%;
+            }
+            @media only screen and (max-width: 768px) {
+                width: 70%;
             }
         }
     }
@@ -290,6 +320,12 @@
                         color: $secondary-dark;
                         font-family: 'Suez One', serif;
                         padding: 40px 0;
+                        @media only screen and (max-width: 970px) {
+                            font-size: 20px;
+                        }
+                        @media only screen and (max-width: 768px) {
+                            font-size: 18px;
+                        }
                     }
 
                     span {
@@ -297,6 +333,23 @@
                         font-size: 80px;
                         font-family: 'Suez One', serif;
                         padding: 40px 0;
+                        @media only screen and (max-width: 970px) {
+                           font-size: 60px;
+                        }
+                        @media only screen and (max-width: 768px) {
+                            font-size: 40px;
+                        }
+                    }
+                    @media only screen and (max-width: 768px) {
+                        width: 80%;
+                        .dashed {
+                            width: 100%;
+                            height: 1px;
+                            border-bottom-style: dashed;
+                            border-bottom-color: $secondary-dark;
+                            border-bottom-width: 2px;
+                            margin: 32px 0;
+                        }
                     }
                 }
             }
@@ -319,6 +372,12 @@
             transform: translate(-50%, -50%);
             left: 50%;
             top: 65%;
+            @media only screen and (max-width: 768px) {
+                width: 35%;
+            }
+            img {
+                width: 100%;
+            }
         }
 
         .item {
@@ -328,6 +387,9 @@
             h5 {
                 font-size: 21px;
                 color: $white-color;
+                @media only screen and (max-width: 768px) {
+                    font-size: 18px;
+                }
             }
 
             .dashed {
@@ -347,6 +409,9 @@
                     font-size: 40px;
                     color: $white-color;
                     font-family: 'Suez One', serif;
+                    @media only screen and (max-width: 768px) {
+                        font-size: 25px;
+                    }
                 }
             }
 
@@ -361,6 +426,12 @@
 
                 }
             }
+            @media only screen and (max-width: 768px) {
+                width: 60%;
+            }
+        }
+        @media only screen and (max-width: 768px) {
+           @include center();
         }
     }
 }
