@@ -3,14 +3,14 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
     .header {
         .header-items {
             padding: 30px 0;
             @include flex();
             border-bottom: 1px solid $white-color;
-
+            
             .header-item {
+                
                 .logo {
                     color: $primary-color;
                     font-size: 30px;
@@ -39,6 +39,16 @@
                             }
                         }
                     }
+                    @media only screen and (max-width: 768px) {
+                        display: none;
+                    }
+                }
+                .burger {
+                    display: none;
+                    color: $white-color;
+                    @media only screen and (max-width: 768px) {
+                        display: block;
+                    }
                 }
             }
 
@@ -48,7 +58,7 @@
     .contacts {
         @include flex();
         padding: 30px 0;
-
+        
        
 
         form {
@@ -64,16 +74,30 @@
                 margin-left: 15px;
             }
         }
+        @media only screen and (max-width: 768px) {
+            display: none;
+        }
     }
 
     .main {
         width: 70%;
         padding: 170px 0;
+        
+        @media only screen and (max-width: 768px) {
+            @include center();
+            width: 100%;
+        }
 
         h1 {
             font-size: 90px;
             font-family: 'Suez One', serif;
             color: $white-color;
+            @media only screen and (max-width: 970px) {
+                font-size: 65px;
+            }
+            @media only screen and (max-width: 768px) {
+                font-size: 50px;
+            }
         }
 
         p {
@@ -82,6 +106,12 @@
             color: $white-color;
             width: 70%;
             padding: 55px 0;
+            @media only screen and (max-width: 970px) {
+                font-size: 18px;
+            }
+            @media only screen and (max-width: 768px) {
+                font-size: 12px;
+            }
         }
     }
 }
@@ -152,10 +182,14 @@
     .soon {
         .title {
             margin: 40px 0;
+            @media only screen and (max-width: 970px) {
+                margin: 15px;
+            }
         }
 
         .cards {
-            @include flex();
+            @include align-cards();
+            gap: 0;
             @media only screen and (max-width: 768px) {
                 @include center();
             }
@@ -353,6 +387,21 @@
                     }
                 }
             }
+            svg {
+                width: 100%;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                left: 50%;
+                top: 107%;
+                z-index: 2;
+                fill: $primary-color;
+                @media only screen and (max-width: 970px) {
+                    top: 104%;
+                }
+                @media only screen and (max-width: 768px) {
+                    top: 100%;
+                }
+            }
         }
     }
 }
@@ -360,12 +409,14 @@
 // snacks
 .snack-section {
     background-color: $secondary-dark;
-
     .items {
         background-color: $secondary-color;
         @include flex();
         padding: 140px 0;
         position: relative;
+        @media only screen and (max-width: 970px) {
+            padding-bottom: 100px;
+        }
 
         .img-container {
             position: absolute;
@@ -374,6 +425,7 @@
             top: 65%;
             @media only screen and (max-width: 768px) {
                 width: 35%;
+                top: 95%;
             }
             img {
                 width: 100%;
@@ -387,7 +439,7 @@
             h5 {
                 font-size: 21px;
                 color: $white-color;
-                @media only screen and (max-width: 768px) {
+                @media only screen and (max-width: 970px) {
                     font-size: 18px;
                 }
             }
@@ -409,7 +461,7 @@
                     font-size: 40px;
                     color: $white-color;
                     font-family: 'Suez One', serif;
-                    @media only screen and (max-width: 768px) {
+                    @media only screen and (max-width: 970px) {
                         font-size: 25px;
                     }
                 }
@@ -500,8 +552,17 @@ footer {
         padding: 55px 0;
         .items {
             @include align-cards();
+            @media only screen and (max-width: 768px) {
+               @include center();
+            }
             .item {
                 width: 22%;
+                @media only screen and (max-width: 970px) {
+                    width: 45%;
+                }
+                @media only screen and (max-width: 768px) {
+                    width: 75%;
+                }
                 .logo {
                     color: $white-color;
                     font-size: 30px;
@@ -540,9 +601,15 @@ footer {
     }
     .copy-right {
         padding: 20px 0;
+        @media only screen and (max-width: 970px) {
+            margin: 0 15px;
+        }
         p {
             color: $white-color;
             font-size: 16px;
+            @media only screen and (max-width: 768px) {
+                font-size: 12px;
+            }
             a {
                 text-decoration: none;
                 color: $white-color;
